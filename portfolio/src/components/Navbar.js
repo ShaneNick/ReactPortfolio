@@ -24,9 +24,18 @@ function Navbar() {
         </button>
       </div>
       <div className="navLinks">
-        <Link to="/"> Home </Link>
-        <Link to="/projects"> Projects </Link>
-        <Link to="/bio"> Bio </Link> 
+        <Link to="/" className={currentLocation.pathname === "/" ? "active" : ""}>
+          Home
+        </Link>
+        <Link to="/projects" className={currentLocation.pathname === "/projects" ? "active" : ""}>
+          Projects
+        </Link>
+        <Link to="/bio" className={currentLocation.pathname === "/bio" ? "active" : ""}>
+          Bio
+        </Link>
+        <Link to="/contact" className={currentLocation.pathname === "/contact" ? "active" : ""}>
+          Contact
+        </Link>
       </div>
     </div>
   );
